@@ -237,7 +237,7 @@ input[type=radio] {
     color: hsl(228, 45%, 44%);
 } */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
 
     .header-container {
         min-height: 300px;
@@ -313,11 +313,6 @@ input[type=radio] {
         height: 18px;
         right: 24px;
         cursor: pointer;
-        display: none;
-    }
-
-    .todo-container:hover .delete-btn {
-        display: block;
     }
 
     .menu-container {
@@ -337,6 +332,16 @@ input[type=radio] {
         justify-content: space-between;
     }
 
+}
+
+@media screen and (min-width: 992px) {
+    .delete-btn {
+        display: none;
+    }
+
+    .todo-container:hover .delete-btn {
+        display: unset;
+    }
 }
 
 .dark-mode {
