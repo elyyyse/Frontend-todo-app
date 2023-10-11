@@ -58,6 +58,7 @@ h1 {
     height: 20px;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 
 .new-todo-container {
