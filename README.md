@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/elyyyse/Frontend-todo-app
-- Live Site URL: elyyyse.github.io/Frontend-todo-app/
+- Live Site URL: https://elyyyse.github.io/Frontend-todo-app/
 
 ## My process
 
