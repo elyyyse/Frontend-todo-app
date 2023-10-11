@@ -1,4 +1,4 @@
-let todos = [];
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 const ALL_STATE = 'all';
 const ACTIVE_STATE = 'active';
@@ -21,6 +21,8 @@ const createNewTodos = () => {
             id: todos.length,
             done: false
         });
+
+        localStorage.setItem('todos', JSON.stringify(todos));
 
         inputText.value = '';
     }
@@ -69,12 +71,16 @@ const renderTodoList = () => {
         deleteBtn.addEventListener('click', (e) => {
             e.stopPropagation;
             const todoToDelete = e.target.parentElement;
-            todos.splice(todoToDelete.dataset.id, 1);
+            const indexToDelete = todos.findIndex((todo) => todo.id == todoToDelete.dataset.id);
+            todos.splice(indexToDelete, 1);
             todoToDelete.remove();
+            localStorage.setItem('todos', JSON.stringify(todos));
             updateItemsLeft();
         });
     }
 }
+
+renderTodoList();
 
 const filterAll = document.querySelectorAll('.filter-all');
 const filterActive = document.querySelectorAll('.filter-active');
@@ -104,6 +110,7 @@ filterComplete.forEach((filter) => {
 
 clearComplete.addEventListener('click', () => {
     todos = todos.filter((todo) => !todo.done);
+    localStorage.setItem('todos', JSON.stringify(todos));
     renderTodoList();
 });
 
