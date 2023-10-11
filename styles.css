@@ -123,6 +123,7 @@ input#new-todo {
     border-bottom: 1px solid var(--horiz-rule);
     display: flex;
     align-items: center;
+    /* position: relative; */
 }
 
 input[type=checkbox] {
@@ -313,6 +314,11 @@ input[type=radio] {
         height: 18px;
         right: 24px;
         cursor: pointer;
+    }
+
+    input[type=checkbox]:checked+label::before {
+        width: 24px;
+        height: 24px;
     }
 
     .menu-container {
