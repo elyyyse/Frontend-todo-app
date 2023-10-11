@@ -178,9 +178,11 @@ input[type=checkbox]:checked+label {
 }
 
 .menu-container {
-    padding: 16px 20px 20px;
+    height: 48px;
+    padding: 0 20px;
     color: var(--menu-fonts);
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -199,8 +201,8 @@ input[type=checkbox]:checked+label {
 
 .filters-mobile {
     width: 100%;
-    height: 18px;
-    padding: 15px 80.5px;
+    height: 48px;
+    padding: 0 80.5px;
     margin-top: 16px;
     background-color: var(--list-bg);
     border-radius: 5px;
@@ -322,7 +324,6 @@ input[type=radio] {
     }
 
     .menu-container {
-        padding: 16px 24px 20px;
         font-size: 14px;
     }
 
