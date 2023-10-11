@@ -48,7 +48,7 @@ Users should be able to:
 
 - This was my first project using the [content template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) `<template>`
 - Learned some best practices for when to use `<img>` tags in my HTML versus when to set `background: url()` in my CSS
-- Figured out how to create a gradient border with border radius (possibly juice not worth the squeeze)
+- Figured out how to create a gradient border with border radius (possibly juice not worth the squeeze) and also used the `::before` pseudo-class for the first time
 
 ### Continued development
 
