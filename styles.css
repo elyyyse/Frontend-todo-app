@@ -12,6 +12,18 @@
     --bg-image: url(./images/bg-desktop-light.jpg);
 }
 
+.dark-mode {
+    --input-text: hsl(235, 39%, 85%);
+    --todo-fonts: hsl(235, 39%, 85%);
+    --todo-complete: hsl(233, 14%, 35%);
+    --menu-fonts: hsl(235, 16%, 43%);
+    --filter-hover: #fff;
+    --list-bg: hsl(235, 24%, 19%);
+    --body-bg: hsl(235, 21%, 11%);
+    --horiz-rule: #393a4b;
+    --bg-image: url(./images/bg-desktop-dark.jpg);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -350,16 +362,4 @@ input[type=radio] {
     .todo-container:hover .delete-btn {
         display: unset;
     }
-}
-
-.dark-mode {
-    --input-text: hsl(235, 39%, 85%);
-    --todo-fonts: hsl(235, 39%, 85%);
-    --todo-complete: hsl(233, 14%, 35%);
-    --menu-fonts: hsl(235, 16%, 43%);
-    --filter-hover: #fff;
-    --list-bg: hsl(235, 24%, 19%);
-    --body-bg: hsl(235, 21%, 11%);
-    --horiz-rule: #393a4b;
-    --bg-image: url(./images/bg-desktop-dark.jpg);
 }
