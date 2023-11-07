@@ -1,86 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <!-- displays site properly based on user's device -->
+    <title>Todo app | Frontend Mentor</title>
 
-  <title>Todo app | Frontend Mentor</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <main>
+      <div class="header-container">
+        <div class="header-content">
+          <h1>
+            TODO
+            <img
+              src="./images/icon-moon.svg"
+              alt="Crescent moon icon"
+              class="h1-mode-toggle"
+              id="h1-dark-icon"
+            />
+            <img
+              src="./images/icon-sun.svg"
+              alt="Sun with rays icon"
+              class="h1-mode-toggle hidden"
+              id="h1-light-icon"
+            />
+          </h1>
 
-<body>
-  <main>
-    <div class="header-container">
-      <div class="header-content">
-        <h1>TODO
-          <img src="./images/icon-moon.svg" alt="Crescent moon icon" class="h1-mode-toggle" id="h1-dark-icon">
-          <img src="./images/icon-sun.svg" alt="Sun with rays icon" class="h1-mode-toggle hidden" id="h1-light-icon">
-        </h1>
-
-        <form action="" id="add-todos">
-          <label class="new-todo-container">
-            <div class="checkbox-placeholder"></div>
-            <input type="text" id="new-todo" name="new-todo" placeholder="Create a new todo...">
-          </label>
-        </form>
+          <form action="" id="add-todos">
+            <label class="new-todo-container">
+              <div class="checkbox-placeholder"></div>
+              <input
+                type="text"
+                id="new-todo"
+                name="new-todo"
+                placeholder="Create a new todo..."
+              />
+            </label>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="main-container">
-      <div class="list-container">
-        <template id="todo-template">
-          <div class="todo-container checkbox" data-id="">
-            <input type="checkbox" id="">
-            <label for="">Go to bed</label>
-            <img src="./images/icon-cross.svg" alt="Cross icon for deleting todo" class="delete-btn">
+      <div class="main-container">
+        <div class="list-container">
+          <template id="todo-template">
+            <div
+              class="todo-container checkbox draggable"
+              data-id=""
+              draggable="true"
+            >
+              <input type="checkbox" id="" />
+              <label for="">Go to bed</label>
+              <img
+                src="./images/icon-cross.svg"
+                alt="Cross icon for deleting todo"
+                class="delete-btn"
+              />
+            </div>
+          </template>
+
+          <div id="todo-list">
+            <!-- todos are rendered here -->
           </div>
-        </template>
 
-        <div id="todo-list">
-          <!-- todos are rendered here -->
-        </div>
-
-        <div class="menu-container">
-          <p><span id="items-left">0</span> items left</p>
-          <div class="filters filters-desktop">
-            <input type="radio" name="filters-d" id="filter-all-d" class="filter-all filter-option" checked>
-            <label for="filter-all-d" class="filter-option">All</label>
-            <input type="radio" name="filters-d" id="filter-active-d" class="filter-active filter-option">
-            <label for="filter-active-d" class="filter-option">Active</label>
-            <input type="radio" name="filters-d" id="filter-complete-d" class="filter-complete filter-option">
-            <label for="filter-complete-d" class="filter-option">Completed</label>
+          <div class="menu-container">
+            <p><span id="items-left">0</span> items left</p>
+            <div class="filters filters-desktop">
+              <input
+                type="radio"
+                name="filters-d"
+                id="filter-all-d"
+                class="filter-all filter-option"
+                checked
+              />
+              <label for="filter-all-d" class="filter-option">All</label>
+              <input
+                type="radio"
+                name="filters-d"
+                id="filter-active-d"
+                class="filter-active filter-option"
+              />
+              <label for="filter-active-d" class="filter-option">Active</label>
+              <input
+                type="radio"
+                name="filters-d"
+                id="filter-complete-d"
+                class="filter-complete filter-option"
+              />
+              <label for="filter-complete-d" class="filter-option"
+                >Completed</label
+              >
+            </div>
+            <p id="clear-complete" class="filter-option">Clear Completed</p>
           </div>
-          <p id="clear-complete" class="filter-option">Clear Completed</p>
+        </div>
+
+        <div class="filter-container">
+          <div class="filters filters-mobile">
+            <input
+              type="radio"
+              name="filters-m"
+              id="filter-all-m"
+              class="filter-all filter-option"
+              checked
+            />
+            <label for="filter-all-m" class="filter-option">All</label>
+            <input
+              type="radio"
+              name="filters-m"
+              id="filter-active-m"
+              class="filter-active filter-option"
+            />
+            <label for="filter-active-m" class="filter-option">Active</label>
+            <input
+              type="radio"
+              name="filters-m"
+              id="filter-complete-m"
+              class="filter-complete filter-option"
+            />
+            <label for="filter-complete-m" class="filter-option"
+              >Completed</label
+            >
+          </div>
         </div>
       </div>
 
-      <div class="filter-container">
-        <div class="filters filters-mobile">
-          <input type="radio" name="filters-m" id="filter-all-m" class="filter-all filter-option" checked>
-          <label for="filter-all-m" class="filter-option">All</label>
-          <input type="radio" name="filters-m" id="filter-active-m" class="filter-active filter-option">
-          <label for="filter-active-m" class="filter-option">Active</label>
-          <input type="radio" name="filters-m" id="filter-complete-m" class="filter-complete filter-option">
-          <label for="filter-complete-m" class="filter-option">Completed</label>
-        </div>
+      <div class="drag-drop">
+        <span>Drag and drop to reorder list</span>
       </div>
-    </div>
-
-    <!-- <div class="drag-drop">Drag and drop to reorder list</div> -->
-
-  </main>
-  <footer class="attribution">
-    <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="http://wwww.elysekan.com">Elyse Kanagaratnam</a>. -->
-  </footer>
-  <script src="app.js"></script>
-</body>
-
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="http://wwww.elysekan.com" target="_blank">Elyse Kanagaratnam</a
+        >.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>
