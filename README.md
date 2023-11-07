@@ -47,14 +47,15 @@ Users should be able to:
 ### What I learned
 
 - This was my first project using the [content template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) `<template>`
-- Learned some best practices for when to use `<img>` tags in my HTML versus when to set `background: url()` in my CSS
+- Learned some better practices for when to use `<img>` tags in my HTML versus when to set `background: url()` in my CSS
 - Figured out how to create a [gradient border with border radius](https://codyhouse.co/nuggets/css-gradient-borders) (possibly juice not worth the squeeze) and also used the `::before` pseudo-class for the first time
 - Bonus feature: I used localStorage, so you won't lose your todos on page refresh
+- UPDATE: Added drag and drop (from my 'continued development' goals below) using [entirely vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). I looked into some libraries, but decided to build it from scratch to better understand how it was all working. I'm pretty proud of how it turned out.
 
 ### Continued development
 
 - For v1 of this app, I did not finesse the transitions for creating/deleting todos, toggling day/night modes, or any of the hover states. I may take a pass at that in v2.
-- There was a bonus requirement in this challenge to add drag and drop. This is something I might revisit once I've learned React or a similar framework.
+- ~~There was a bonus requirement in this challenge to add drag and drop. This is something I might revisit once I've learned React or a similar framework.~~
 
 ## Author
 
