@@ -236,14 +236,7 @@ input[type='checkbox']:checked + label {
 }
 
 .drag-drop {
-  font-size: 14px;
-  font-weight: 400px;
-  letter-spacing: -0.19px;
-  color: var(--menu-fonts);
-
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
 input[type='radio'] {
@@ -364,7 +357,14 @@ footer {
   }
 
   .drag-drop {
+    font-size: 14px;
+    font-weight: 400px;
+    letter-spacing: -0.19px;
+    color: var(--menu-fonts);
+
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
   }
 
   footer {
