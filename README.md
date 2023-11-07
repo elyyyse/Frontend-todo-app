@@ -55,7 +55,7 @@ Users should be able to:
 ### Continued development
 
 - For v1 of this app, I did not finesse the transitions for creating/deleting todos, toggling day/night modes, or any of the hover states. I may take a pass at that in v2.
-- ~~There was a bonus requirement in this challenge to add drag and drop. This is something I might revisit once I've learned React or a similar framework.~~
+- ~~There was a bonus requirement in this challenge to add drag and drop. This is something I might revisit once I've learned React or a similar framework.~~ (added - see above)
 
 ## Author
 
