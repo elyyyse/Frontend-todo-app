@@ -145,7 +145,15 @@ input#new-todo {
 }
 
 input[type='checkbox'] {
-  display: none;
+  /* Visually Hidden styles from the A11y Project  
+  https://www.a11yproject.com/posts/how-to-hide-content/ */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
 }
 
 .checkbox label::before {
