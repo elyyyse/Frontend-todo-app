@@ -2,6 +2,7 @@
   --primary-blue: hsl(220, 98%, 61%);
   --gradient: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   --input-text: hsl(235, 14%, 26%);
+  --text-input-outline: #494b68 solid 3px;
   --todo-fonts: hsl(235, 19%, 35%);
   --todo-complete: hsl(233, 11%, 84%);
   --menu-fonts: hsl(235, 9%, 61%);
@@ -14,6 +15,7 @@
 
 .dark-mode {
   --input-text: hsl(235, 39%, 85%);
+  --text-input-outline: #cacce5 solid 2px;
   --todo-fonts: hsl(235, 39%, 85%);
   --todo-complete: hsl(233, 14%, 35%);
   --menu-fonts: hsl(235, 16%, 43%);
@@ -27,6 +29,11 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+input,
+button {
+  font: inherit;
 }
 
 body {
@@ -68,6 +75,8 @@ h1 {
 .h1-mode-toggle {
   width: 20px;
   height: 20px;
+  background: none;
+  border: none;
   position: absolute;
   right: 0;
   cursor: pointer;
@@ -89,7 +98,6 @@ input#new-todo {
   width: 100%;
   background-color: var(--list-bg);
   border: none;
-  font-family: 'Josefin Sans';
   font-size: 12px;
   color: var(--input-text);
   caret-color: var(--primary-blue);
@@ -112,6 +120,10 @@ input#new-todo {
 
 #new-todo:focus {
   outline: none;
+}
+label.new-todo-container:has(input[type='text']):focus-within {
+  outline: #cacce5 solid 2px;
+  outline-offset: 3px;
 }
 
 .main-container {
@@ -174,9 +186,15 @@ input[type='checkbox'] {
   cursor: pointer;
 }
 
+ {
+  outline: auto;
+}
+
 .delete-btn {
   width: 12px;
   height: 12px;
+  background: none;
+  border: none;
   position: absolute;
   right: 20px;
 }
@@ -190,6 +208,10 @@ input[type='checkbox'] {
     border-color: transparent;
     border-radius: 50%;
   }
+}
+
+input[type='checkbox']:focus + label::before {
+  outline: auto;
 }
 
 input[type='checkbox']:checked + label::before {
@@ -214,6 +236,9 @@ input[type='checkbox']:checked + label {
 }
 
 #clear-complete {
+  background: none;
+  border: none;
+  color: var(--menu-fonts);
   cursor: pointer;
 }
 
@@ -248,7 +273,8 @@ input[type='checkbox']:checked + label {
 }
 
 input[type='radio'] {
-  display: none;
+  width: 0;
+  height: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -258,6 +284,9 @@ input[type='radio'] {
   }
 }
 
+.filter-option:focus + label {
+  outline: auto;
+}
 .filter-option:checked + label {
   color: var(--primary-blue);
 }
@@ -393,10 +422,24 @@ footer {
 
 @media screen and (min-width: 992px) {
   .delete-btn {
-    display: none;
+    /* Visually Hidden styles from the A11y Project  
+  https://www.a11yproject.com/posts/how-to-hide-content/ */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
   }
 
-  .todo-container:hover .delete-btn {
-    display: unset;
+  .todo-container:hover .delete-btn,
+  .delete-btn:focus {
+    clip: unset;
+    clip-path: unset;
+    height: unset;
+    width: unset;
+    overflow: unset;
+    white-space: unset;
   }
 }

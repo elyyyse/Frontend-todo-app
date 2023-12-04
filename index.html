@@ -28,22 +28,24 @@
         <div class="header-content">
           <h1>
             TODO
-            <img
-              src="./images/icon-moon.svg"
-              alt="Crescent moon icon"
-              class="h1-mode-toggle"
+            <button
               id="h1-dark-icon"
-            />
-            <img
-              src="./images/icon-sun.svg"
-              alt="Sun with rays icon"
-              class="h1-mode-toggle hidden"
+              class="h1-mode-toggle"
+              aria-label="Dark mode"
+            >
+              <img src="./images/icon-moon.svg" alt="Crescent moon icon" />
+            </button>
+            <button
               id="h1-light-icon"
-            />
+              class="h1-mode-toggle hidden"
+              aria-label="Light mode"
+            >
+              <img src="./images/icon-sun.svg" alt="Sun with rays icon" />
+            </button>
           </h1>
 
           <form action="" id="add-todos">
-            <label class="new-todo-container">
+            <label class="new-todo-container" for="new-todo">
               <div class="checkbox-placeholder"></div>
               <input
                 type="text"
@@ -66,11 +68,12 @@
             >
               <input type="checkbox" id="" />
               <label for="">Go to bed</label>
-              <img
-                src="./images/icon-cross.svg"
-                alt="Cross icon for deleting todo"
-                class="delete-btn"
-              />
+              <button class="delete-btn" aria-label="Delete">
+                <img
+                  src="./images/icon-cross.svg"
+                  alt="Cross icon for deleting todo"
+                />
+              </button>
             </div>
           </template>
 
@@ -106,7 +109,9 @@
                 >Completed</label
               >
             </div>
-            <p id="clear-complete" class="filter-option">Clear Completed</p>
+            <button id="clear-complete" class="filter-option">
+              Clear Completed
+            </button>
           </div>
         </div>
 
