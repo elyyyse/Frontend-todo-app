@@ -193,6 +193,7 @@ input[type='checkbox'] {
   border: none;
   position: absolute;
   right: 20px;
+  cursor: pointer;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -365,7 +366,6 @@ footer {
     width: 18px;
     height: 18px;
     right: 24px;
-    cursor: pointer;
   }
 
   input[type='checkbox']:checked + label::before {

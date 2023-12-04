@@ -73,7 +73,7 @@ const renderTodoList = () => {
     const deleteBtn = newTodo.querySelector('.delete-btn');
     deleteBtn.addEventListener('click', e => {
       e.stopPropagation;
-      const todoToDelete = e.target.parentElement;
+      const todoToDelete = e.target.parentElement.parentElement;
       const indexToDelete = todos.findIndex(
         todo => todo.id == todoToDelete.dataset.id
       );
