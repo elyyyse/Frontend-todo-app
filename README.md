@@ -1,6 +1,6 @@
 # Frontend Mentor - Todo app solution
 
-This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -40,15 +40,14 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- VanillaJS
+- Vanilla JavaScript
 
 ### What I learned
 
 - This was my first project using the [content template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) `<template>`
 - Learned some better practices for when to use `<img>` tags in my HTML versus when to set `background: url()` in my CSS
-- Figured out how to create a [gradient border with border radius](https://codyhouse.co/nuggets/css-gradient-borders) (possibly juice not worth the squeeze) and also used the `::before` pseudo-class for the first time
+- Figured out how to create a [gradient border with border radius](https://codyhouse.co/nuggets/css-gradient-borders) (possibly juice not worth the squeeze) and also created a `::before` pseudo-element for the first time
 - Bonus feature: I used localStorage, so you won't lose your todos on page refresh
 - UPDATE: Added drag and drop (from my 'continued development' goals below) using [entirely vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). I looked into some libraries, but decided to build it from scratch to better understand how it was all working. I'm pretty proud of how it turned out.
 
