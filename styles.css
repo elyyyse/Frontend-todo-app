@@ -186,10 +186,6 @@ input[type='checkbox'] {
   cursor: pointer;
 }
 
- {
-  outline: auto;
-}
-
 .delete-btn {
   width: 12px;
   height: 12px;
