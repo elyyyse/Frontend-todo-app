@@ -4,7 +4,7 @@ const COMPLETED_STATE = 'completed';
 let filterState = ALL_STATE;
 let isDarkMode = JSON.parse(localStorage.getItem('isDarkMode')) || false;
 
-const todos = JSON.parse(localStorage.getItem('todos')) || [];
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 const addTodos = document.querySelector('#add-todos');
 addTodos.addEventListener('submit', e => {
