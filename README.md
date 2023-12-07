@@ -47,7 +47,7 @@ Users should be able to:
 
 - This was my first project using the [content template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template), which I used to templatize the creation of new todos
 - Learned some better practices for when to use `<img>` tags in my HTML versus when to set `background: url()` in my CSS
-- Figured out how to create a [gradient border with border radius](https://codyhouse.co/nuggets/css-gradient-borders) (possibly juice not worth the squeeze) and also created a `::before` pseudo-element for the first time
+- Figured out how to create a [gradient border with border radius](https://codyhouse.co/nuggets/css-gradient-borders) and also created a `::before` pseudo-element for the first time
 - Figured out how to fully customize radio buttons (hidden) and checkboxes (replaced with ::before pseudo-elements) while still maintaining accessibility for keyboard users
 - Bonus feature: I used localStorage, so you won't lose your todos on page refresh
 - **UPDATE**: Added drag and drop (from my 'continued development' goals below) using [entirely vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). I looked into some libraries, but decided to build it from scratch to better understand how it was all working. I'm pretty proud of how it turned out.
