@@ -73,10 +73,11 @@ const renderTodoList = () => {
     const deleteBtn = newTodo.querySelector('.delete-btn');
     deleteBtn.addEventListener('click', e => {
       e.stopPropagation;
-      const todoToDelete = e.target.parentElement.parentElement;
+      const todoToDelete = e.target.parentElement;
       const indexToDelete = todos.findIndex(
         todo => todo.id == todoToDelete.dataset.id
       );
+      console.log(indexToDelete);
       todos.splice(indexToDelete, 1);
       todoToDelete.remove();
       localStorage.setItem('todos', JSON.stringify(todos));

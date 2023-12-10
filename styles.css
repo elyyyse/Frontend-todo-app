@@ -94,6 +94,10 @@ h1 {
   align-items: center;
 }
 
+.new-todo-container > label {
+  width: inherit;
+}
+
 input#new-todo {
   width: 100%;
   background-color: var(--list-bg);
@@ -121,7 +125,7 @@ input#new-todo {
 #new-todo:focus {
   outline: none;
 }
-label.new-todo-container:has(input[type='text']):focus-within {
+.new-todo-container:has(input[type='text']):focus-within {
   outline: #cacce5 solid 2px;
   outline-offset: 3px;
 }
@@ -281,7 +285,7 @@ input[type='radio'] {
   }
 }
 
-.filter-option:focus + label {
+.filter-option:focus-visible + label {
   outline: auto;
 }
 .filter-option:checked + label {
@@ -366,6 +370,10 @@ footer {
     width: 18px;
     height: 18px;
     right: 24px;
+  }
+
+  .delete-btn > * {
+    pointer-events: none;
   }
 
   input[type='checkbox']:checked + label::before {
