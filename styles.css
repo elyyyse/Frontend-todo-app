@@ -100,9 +100,10 @@ h1 {
 
 input#new-todo {
   width: 100%;
-  background-color: var(--list-bg);
   border: none;
   font-size: 12px;
+  vertical-align: middle;
+  line-height: 1.5;
   color: var(--input-text);
   caret-color: var(--primary-blue);
   text-indent: 12px;
